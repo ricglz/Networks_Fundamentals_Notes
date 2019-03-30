@@ -1,6 +1,4 @@
-Repaso Redes 1º Parcial
-
-1. Introducción a redes
+## Introducción a redes
   - Obra: "El músico" por Caravagio, en el MET
   - Una **red de computadoras** es la conexión de DTs (Dispositivos Terminales), mediante enlaces de comunicación a través de DIs (Dispositivos intermedios) como routers.
   - Componentes de Internet
@@ -15,7 +13,7 @@ Repaso Redes 1º Parcial
   - Un protocolo consiste en los pasos necesarios para realizar un proceso de comunicación.
   - Aplciaciones distribuidas son aquellas en la que parte de un programa se ejecuta en una computadora y otro en otra. Maneja un modelo cliente-servidor
   - P2P (Peer to Peer) es cuando una aplicación a veces se comporta como servidor y a veces como cliente.
-2. Conceptos de Redes
+## Conceptos de Redes
   - Obra: "La victoria alada o Nike" de Samotracia, Museo de Louvre.
   - La WWW fue creada por Tim Berners-Lee mientras trabajaba en el CERN. Junto con su equipo desarrolló los protocolos HTTP, las direcciones URL y el lenguaje HTML.
   - Un navegador permite que un cliente pueda ver la información almacenada en un servidor.
