@@ -3,6 +3,7 @@
 - Civilización Zapoteca, Edificio de la cultura zapoteca, Mitla Oaxaca
 - Civilización Maya, Ruinas de Uxmal, Yucatán
 - Civilización Azteca, La piedra del Sol o Calendario Azteca, Museo de Antropología
+- Juan Soriano, La Paloma, Museo de Arte Contemporáneo (MARCO) de Monterrey, N.L.
 
 ## Nivel transporte
 
@@ -101,3 +102,39 @@
   - Multicast: El proceso de enviar un paquete a un grupo seleccionado en la red. De la 224.0.0.0 a 224.0.0.255 están reservadas para multicast en redes locales.
   - La NAT permite relacionar las IP privadas con las públicas.
 - Existe una dirección especial llamda APIPA que cubre 169.254.0.0/16 (169.254.0.1 a 169.254.255.254)
+
+### IPv6
+
+- Se creo por consecuencia del agotamiento de direcciones de IPv4. Estas nuevas direcciones IPv6 están formadas de 16 bytes cada una.
+- En la actualidad esto está tomando aún mayor relevancia debido a la implementación del Internet of Things (IoT), la cual requiere de aún más direcciones para una mayor cantidad de dispositivos.
+- Aunque no es oficial comúnmente se usa la notación por hextetos. Es decir que se interpretan 2 bytes de forma hexadecimal y estos se van juntando con un ":" de intermedio.
+- Para hacer la notación de hextetos compresa se deben realizar los siguientes 2 pasos.
+  1. Omitir los 0s que se tengan a la izquierda del hexteto.
+  2. Omitir todos los hextetos que sean únicamente 0s.
+- Ejemplos
+  - "0001:0002:0003:0004" simplificado completamente es: "1:2:3:4"
+  - "0001:0000:0000:0002" simplificado completamente es: "1::2"
+- La longitud de prefijo fijo en IPv6 se usa para representar la porción de la dirección. Tiene un rango de 0-128
+- Direcciones IPv6 unicast
+  * Son globales y enrutables, siendo equivalentes a las direcciones públicas de IPv4.
+  * Tienen un prefijo de ruteo, cuyo valor más común es /48
+- Hay dos formas en las que un dispositivo puede tener una dirección IPv6 dinámica
+  * Mediante **SLAAC** que significa Stateless Address Autoconfiguration
+  * O mediante **DHCPv6**
+- Hay varias formas de crear coexistencia entre IPv4 e IPv6
+  * **Dual stack**, el router permite tanto IPv4 como IPv6
+  * **Tunneling**, el paquete IPv6 se encapsula en un paquete IPv4
+  * **Translation**, el cual permite hacer una conversión equivalente al NAT de IPv4 usando un mecanismo llamado NAT64
+
+### ICMP
+
+- En caso de paquetes con error se envían de regreso paquetes mediante el protocolo ICMP encapsulado en IP.
+- Sólo hace un ECHO.
+- ICMP existe tanto para la versión IPv4 como IPv6.
+- Su RFC es el 792.
+- Es usado para herramientas de **ping** y **traceroute**
+
+### ARP
+
+- Significa **Address Resolution Protocol**
+- Se usa para obtener la dirección MAC de una dirección IP.
